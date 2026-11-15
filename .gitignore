@@ -4,3 +4,6 @@ target/
 *.log
 .env
 .DS_Store
+
+# Configuração local com senha
+src/main/resources/application-local.properties

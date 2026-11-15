@@ -10,11 +10,14 @@ Spring Boot 3.5 · Java 17 · Thymeleaf · Bootstrap · PostgreSQL/Supabase · F
 
    **Postgres local**
    ```
-   DB_URL=jdbc:postgresql://localhost:5432/organizador
+   DB_URL=jdbc:postgresql://localhost:5432/keepup
    DB_USER=postgres
    DB_PASSWORD=sua_senha
    ```
-   (crie o banco antes: `CREATE DATABASE organizador;`)
+   (crie o banco antes: `CREATE DATABASE keepup;`)
+
+   Em vez de `DB_PASSWORD`, você pode pôr a senha em `src/main/resources/application-local.properties`
+   (`spring.datasource.password=...`). Esse arquivo está no `.gitignore`.
 
    **Supabase** — painel do projeto → **Connect** → **Session pooler** (não use o Transaction pooler):
    ```
@@ -24,7 +27,7 @@ Spring Boot 3.5 · Java 17 · Thymeleaf · Bootstrap · PostgreSQL/Supabase · F
    ```
 3. Rode `OrganizadorApplication` e acesse http://localhost:8080
 
-Na primeira execução o Flyway cria o schema `organizador` com todas as tabelas e views.
+Na primeira execução o Flyway cria o schema `keepup` com todas as tabelas e views.
 Se você já rodou o DDL na mão, ele só marca como versão 1 e segue.
 
 ## Banco
